@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Account Portal</title>
+    <link rel="stylesheet" href="Case-28.css">
+</head>
+<body>
+    <header>
+        <h1>User Account Portal</h1>
+        <nav>
+            <a href="#register">Register</a>
+            <a href="#login">Login</a>
+            <a href="#recovery">Forgot Password</a>
+            <a href="#profile">Profile</a>
+        </nav>
+    </header>
+    <main class="container">
+        <section id="register" class="card">
+            <h2>Create Account</h2>
+            <form action="#" method="post">
+                <label for="name">Full Name</label>
+                <input type="text" id="name" name="name"
+                       placeholder="Enter your name" required minlength="3">
+                <label for="email">Email Address</label>
+                <input type="email" id="email" name="email"
+                       placeholder="Enter your email" required>
+                <label for="password">Password</label>
+                <input type="password" id="password" name="password"
+                       placeholder="Create a password"
+                       minlength="8" required>
+                <label for="confirm">Confirm Password</label>
+                <input type="password" id="confirm" name="confirm"
+                       placeholder="Confirm your password" required>
+
+                <button type="submit">Register</button>
+            </form>
+        </section>
+        <section id="login" class="card">
+            <h2>Login</h2>
+            <form action="#" method="post">
+                <label for="login-email">Email Address</label>
+                <input type="email" id="login-email" name="email"
+                       placeholder="Enter your email" required>
+                <label for="login-password">Password</label>
+                <input type="password" id="login-password"
+                       name="password" placeholder="Enter password" required>
+
+                <button type="submit">Login</button>
+            </form>
+        </section>
+        <section id="recovery" class="card">
+            <h2>Password Recovery</h2>
+            <form action="#" method="post">
+                <label for="recovery-email">Registered Email</label>
+                <input type="email" id="recovery-email"
+                       name="email" placeholder="Enter your email" required>
+                <button type="submit">Reset Password</button>
+            </form>
+        </section>
+        <section id="profile" class="card">
+            <h2>Profile Setup</h2>
+            <form action="#" method="post">
+                <label for="profile-name">Full Name</label>
+                <input type="text" id="profile-name" name="name" required>
+                <label for="phone">Phone Number</label>
+                <input type="tel" id="phone" name="phone"
+                       pattern="[0-9]{10}" maxlength="10"
+                       placeholder="10-digit number" required>
+                <label for="country">Country</label>
+                <select id="country" name="country" required>
+                    <option value="">Select Country</option>
+                    <option value="India">India</option>
+                    <option value="USA">USA</option>
+                    <option value="UK">UK</option>
+                </select>
+                <label for="bio">About Me</label>
+                <textarea id="bio" name="bio"
+                          placeholder="Write about yourself"
+                          maxlength="200"></textarea>
+
+                <button type="submit">Save Profile</button>
+            </form>
+        </section>
+    </main>
+    <footer>
+        <p>User Account Portal | Registration and Login System</p>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,133 @@
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #eef2f8;
+    color: #172554;
+    line-height: 1.6;
+}
+
+header {
+    background-color: #101c3d;
+    color: white;
+    text-align: center;
+    padding: 25px;
+}
+
+nav {
+    margin-top: 12px;
+}
+
+nav a {
+    color: #67e8f9;
+    text-decoration: none;
+    margin: 10px;
+}
+
+nav a:hover {
+    text-decoration: underline;
+}
+
+.container {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 25px;
+    max-width: 950px;
+    margin: 30px auto;
+    padding: 15px;
+}
+
+.card {
+    background-color: white;
+    padding: 25px;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px #00000015;
+}
+
+.card h2 {
+    color: #1d4ed8;
+    margin-bottom: 18px;
+    text-align: center;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+label {
+    margin: 10px 0 5px;
+    font-weight: bold;
+}
+
+input,
+select,
+textarea {
+    width: 100%;
+    padding: 11px;
+    border: 1px solid #b8c4d8;
+    border-radius: 6px;
+    font-size: 15px;
+    background-color: #f8fafc;
+}
+
+input:focus,
+select:focus,
+textarea:focus {
+    outline: 2px solid #0891b2;
+    border-color: #0891b2;
+    background-color: white;
+}
+
+input:invalid:not(:placeholder-shown) {
+    border-color: #dc2626;
+}
+
+textarea {
+    resize: vertical;
+    min-height: 80px;
+}
+
+button {
+    margin-top: 18px;
+    padding: 12px;
+    border: none;
+    border-radius: 6px;
+    background-color: #1d4ed8;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #101c3d;
+}
+
+button:focus-visible,
+a:focus-visible {
+    outline: 3px solid #0891b2;
+    outline-offset: 3px;
+}
+
+footer {
+    background-color: #101c3d;
+    color: white;
+    text-align: center;
+    padding: 18px;
+}
+
+@media (max-width: 650px) {
+    .container {
+        grid-template-columns: 1fr;
+    }
+
+    nav a {
+        display: inline-block;
+        margin: 5px;
+    }
+}
